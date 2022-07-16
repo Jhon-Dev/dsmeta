@@ -9,7 +9,7 @@ type Props = {
 };
 
 function handleClick(saleId: number) {
-  axios(`${BASE_URL}/sales/${saleId}/notification`).then((response) => {
+  axios.get(`${BASE_URL}/sales/${saleId}/notification`).then((response) => {
     toast.info('SMS enviado com sucesso');
   });
 }
